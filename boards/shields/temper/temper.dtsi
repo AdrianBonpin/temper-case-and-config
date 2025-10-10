@@ -82,8 +82,22 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4)  RC(2,5) RC(2,6) RC(2,7) RC(2,8) RC(2,9)
     };
 };
 
+&pinctrl {
+    pro_micro_i2c_default: pro_micro_i2c_default {
+        group-nor_0 {
+            // P0.17 is SDA, P0.20 is SCL
+            psels = <NRF_PSEL(TWIM_SDA, 0, 17), NRF_PSEL(TWIM_SCL, 0, 20)>;
+            bias-pull-up; // I2C lines require pull-up
+        };
+    };
+};
+
 &pro_micro_i2c {
     status = "okay";
+
+    // Assign the new pinctrl group
+    pinctrl-0 = <&pro_micro_i2c_default>;
+    pinctrl-1 = <&pro_micro_i2c_sleep>; // Keeps power management settings
 
     oled: ssd1306@3c {
         compatible = "solomon,ssd1306fb";
