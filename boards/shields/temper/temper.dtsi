@@ -83,23 +83,25 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4)  RC(2,5) RC(2,6) RC(2,7) RC(2,8) RC(2,9)
 };
 
 &pro_micro_i2c {
+    // Override the status to "okay" to enable the bus
     status = "okay";
 
+    // Define the SSD1306 display device as a child node
     oled: ssd1306@3c {
         compatible = "solomon,ssd1306fb";
-        reg = <0x3c>;
-        label = "DISPLAY";
+        reg = <0x3c>; // I2C address, 0x3C or 0x3D are common
         width = <128>;
         height = <64>;
+        display-offset = <0 0>;
         segment-offset = <0>;
         page-offset = <0>;
-        display-offset = <0>;
-        multiplex-ratio = <63>;
-        // charge-pump = "internal"; <-- REMOVE THIS LINE
-        
-        prechargep = <0x22>; // Keep this, as it was required previously
-
-        // You should also remove the 'status = "okay";' line if it's still in there
-        // status = "okay";
+        rotation = <0>;
+        contrast = <0>;
+        full-init;
+        power-mode = <0>;
     };
+};
+
+&default_transform {
+    display = <&oled>;
 };
