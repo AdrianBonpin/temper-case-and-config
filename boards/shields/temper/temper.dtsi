@@ -83,18 +83,24 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4)  RC(2,5) RC(2,6) RC(2,7) RC(2,8) RC(2,9)
 };
 
 &pro_micro_i2c {
-    status = "okay";
+    status = "okay"; // Enables the I2C bus
 
     oled: ssd1306@3c {
         compatible = "solomon,ssd1306fb";
         reg = <0x3c>;
+        label = "DISPLAY"; // Add a label for easier referencing/debugging
         width = <128>;
         height = <64>;
         segment-offset = <0>;
         page-offset = <0>;
         display-offset = <0>;
-        multiplex-ratio = <63>; // 64 rows - 1
+        multiplex-ratio = <63>; // Correct for 64-row display
         charge-pump = "internal";
-        status = "okay";
+        
+        prechargep = <0x22>; // <-- CRITICAL MISSING LINE ADDED
+
+        // The 'status = "okay";' line is generally not needed inside a device node
+        // if it's already enabled by its parent or you have a separate Kconfig option for the driver.
+        // It's often cleaner to omit it here.
     };
 };
