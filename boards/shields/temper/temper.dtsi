@@ -82,19 +82,22 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4)  RC(2,5) RC(2,6) RC(2,7) RC(2,8) RC(2,9)
     };
 };
 
-// Define the I2C bus and the display device
+// replace the following lines for the 128x64 screen by default
 &pro_micro_i2c {
-    // Enable the default I2C bus (which uses pins 5 and 6)
     status = "okay";
 
-    // Define the SSD1306 display device as a child node
     oled: ssd1306@3c {
         compatible = "solomon,ssd1306fb";
-        reg = <0x3c>; // I2C address
-        label = "OLED_DISPLAY";
+        reg = <0x3c>;
         width = <128>;
         height = <64>;
+        segment-offset = <0>;
+        page-offset = <0>;
+        display-offset = <0>;
         multiplex-ratio = <63>;
+        segment-remap;
+        com-invdir;
+        inversion-on;
         prechargep = <0x22>;
     };
 };
