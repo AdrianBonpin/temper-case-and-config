@@ -76,7 +76,7 @@
         };
 
         FPS_UPPER {
-            display-name = "FPS";
+            display-name = "FRG";
             bindings = <
 &kp ESCAPE  &kp N1  &trans  &kp N2  &kp N3    &trans  &trans  &trans  &trans  &trans
 &trans      &trans  &trans  &trans  &kp N4    &trans  &trans  &trans  &trans  &trans
@@ -86,21 +86,11 @@
         };
 
         EXTRA_1 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans                                    &trans  &trans  &trans
-            >;
+            status = "reserved";
         };
 
         EXTRA_2 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans                                    &trans  &trans  &trans
-            >;
+            status = "reserved";
         };
     };
 };
