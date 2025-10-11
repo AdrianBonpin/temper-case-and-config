@@ -1,4 +1,6 @@
 # Custom temper Config
+![banner](assets/banner.jpg)
+
 A custom config for the [temper](https://github.com/raeedcho/temper) by raeedcho.
 ## Modules Used
 - [oled_adapter](https://github.com/mctechnology17/zmk-oled-adapter) by mctechnology17 
@@ -14,7 +16,11 @@ It also comes with 2 versions for the top plate, one with a dedicated switch, an
 
 I haven't tested the one with a switch yet since I don't have a printer ready, but I'll update this repo once I do.
 
-*images to be added...*
+![close](assets/close-up.jpg)
+
+![left-close](assets/left.jpg)
+
+![hero-left](assets/hero.jpg)
 ## Keymap
 Generated using **caksoylar's** [keymap-drawer](https://github.com/caksoylar/keymap-drawer)
 ![keymap](assets/temper_keymap_11-10-2025.svg)
