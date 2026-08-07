@@ -1,12 +1,12 @@
 ---
 include:
-  - board: nice_nano_v2
+  - board: nice_nano//zmk
     shield: temper_left oled_adapter_pro_micro_128x32 nice_oled
     artifact-name: "LEFT Temper Wireless NNv2"
     snippet: studio-rpc-usb-uart 
-  - board: nice_nano_v2 
+  - board: nice_nano//zmk
     shield: temper_right oled_adapter_pro_micro_128x32 nice_oled
     artifact-name: "RIGHT Temper Wireless NNv2"
-  - board: nice_nano_v2
+  - board: nice_nano//zmk
     shield: settings_reset
     artifact-name: "RESET Temper Wireless NNv2"
