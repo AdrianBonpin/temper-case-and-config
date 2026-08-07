@@ -3,11 +3,7 @@
 Bill of materials for building the custom temper split keyboard with the case in
 [`case/`](case/readme.md). Quantities are for the **full build (both halves)**.
 
-> **Case hardware sizing note:** The screw/nut sizes below were **measured from the
-> STL files** (countersink ~8 mm in the top plate, M4 hex-nut pocket = 7 mm across
-> flats in the bottom case). If you have the physical parts, double-check with
-> calipers before buying — and always test-fit one screw on a test print, since
-> FDM printers shrink holes slightly.
+> **Case hardware sizing note:** Sizes below are based on the [issue thread](https://github.com/AdrianBonpin/temper-case-and-config/issues/1) — the original build used M2, and a builder confirmed that **M2 is too wide and 6 mm is too short**, successfully using **M1.6 × 7 mm** instead. Always test-fit one screw on a test print, since FDM printers shrink holes slightly.
 
 ## 1. 3D-printed case (2× of each, one per half)
 
@@ -24,8 +20,9 @@ Screw holes may need a quick ream after printing.
 
 | Part | Spec | Qty | Notes |
 |------|------|-----|-------|
-| Screws | **M4 × 12 mm flat-head (countersunk) machine screws** | 10 | M4 × 14 mm if you want extra reach. Countersunk heads sit flush in the ~8 mm recess in the top plate. |
-| Nuts | **M4 hex nuts** (7 mm across flats, 3.2 mm thick) | 10 | Drop into the hex pockets in the bottom case. |
+| Screws | **M1.6 × 7 mm machine screws** | 10 | Verified by a builder (M2 was too wide, 6 mm was too short). Use a pan/button head — the holes are small and flush mounting is tight. |
+| Nuts | **M1.6 hex nuts** (3.2 mm across flats) | 10 | Drop into the pockets in the bottom case. |
+| Alt. screws | M2 × 8 mm | 10 | What the original build used — only fits if your print keeps the holes loose enough. |
 
 ## 3. Electronics
 
