@@ -8,7 +8,9 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      revision: v0.3.0
+      # zmk-nice-oled is tested against ZMK v0.3.0 (LVGL 8);
+      # ZMK main uses LVGL 9.3 which the module does not support yet.
       import: app/west.yml
       # OLED Adapter
     - name: zmk-oled-adapter
