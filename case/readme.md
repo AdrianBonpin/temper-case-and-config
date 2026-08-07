@@ -2,6 +2,8 @@
 ![case](/assets/case.jpg)
 
 *added rubber feet at the bottom for grip (might add a version with slots for future bottom)*
+
+> **Hardware list:** see the [BOM](BOM.md) for the screws, nuts, and electronics needed for the build.
 # Top Case
 ![top](/assets/top-switch-case.png)
 
